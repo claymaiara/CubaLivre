@@ -47,6 +47,7 @@ function gCocaFraca ($qtdRefri){
 
 echo gCocaFraca(57);
 
+<<<<<<< HEAD
 function gPepsiForte($qtdRefri){
 
 	if($qtdRefri < 60 OR $qtdRefri >64){
@@ -151,4 +152,6 @@ function gGelo($qtdGelo) {
 	}
 }
 
+=======
+>>>>>>> 4992ad3fefade573ca5547866683667f28b9308d
 ?>
