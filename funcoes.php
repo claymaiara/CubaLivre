@@ -11,7 +11,7 @@ function gCocaForte($qtdRefri){
 	}
 	else return 0;
 }
-echo gCocaForte(51) .' ';
+echo 'CocaForte: '.gCocaForte(51) .' <br> ';
 
 function gCocaSuave ($qtdRefri){
 	if ($qtdRefri <= 52 OR $qtdRefri >= 58) {
@@ -29,7 +29,7 @@ function gCocaSuave ($qtdRefri){
 		return 0;
 	}
 }
-echo gCocaSuave(50). ' ';
+echo 'CocaSuave: '.gCocaSuave(50). ' <br> ';
 
 function gCocaFraca ($qtdRefri){
 	if($qtdRefri <= 56 OR $qtdRefri >60){
@@ -45,9 +45,8 @@ function gCocaFraca ($qtdRefri){
 	}
 }
 
-echo gCocaFraca(57);
+echo 'CocaFraca: '.gCocaFraca(57). ' <br>';
 
-<<<<<<< HEAD
 function gPepsiForte($qtdRefri){
 
 	if($qtdRefri < 60 OR $qtdRefri >64){
@@ -59,7 +58,7 @@ function gPepsiForte($qtdRefri){
 	}
 	else return 0;
 }
-echo gPepsiForte(61) .' ';
+echo 'PepsiForte: '.gPepsiForte(61) .'<br> ';
 
 function gPepsiSuave ($qtdRefri){
 	if ($qtdRefri <= 62 OR $qtdRefri >= 68) {
@@ -77,7 +76,7 @@ function gPepsiSuave ($qtdRefri){
 		return 0;
 	}
 }
-echo gPepsiSuave(60). ' ';
+echo 'PepsiSuave: '.gPepsiSuave(60). '<br> ';
 
 function gPepsiFraca ($qtdRefri){
 	if($qtdRefri <= 66 OR $qtdRefri >70){
@@ -93,7 +92,7 @@ function gPepsiFraca ($qtdRefri){
 	}
 }
 
-echo gPepsiFraca(67). ' ';
+echo 'PepsiFraca: '.gPepsiFraca(67). ' <br> ';
 
 function  gRunForte($qtdRun) {
 	if ($qtdRun <= 23 || $qtdRun > 30) {
@@ -108,7 +107,7 @@ function  gRunForte($qtdRun) {
 		return 0;
 	}
 }
-echo gRunForte(26). ' ';
+echo 'RunForte: '.gRunForte(26). ' <br> ';
 
 function  gRunSuave($qtdRun) {
 	if ($qtdRun <= 15 || $qtdRun >= 27) {
@@ -126,7 +125,7 @@ function  gRunSuave($qtdRun) {
 		return 0;
 	}
 }
-echo gRunSuave(26). ' ';
+echo 'RunSuave: '.gRunSuave(26). '<br> ';
 
 function gRunFraco($qtdRun) {
 	if ($qtdRun < 10 || $qtdRun >= 20) {
@@ -141,7 +140,7 @@ function gRunFraco($qtdRun) {
 		return 0;
 	}
 }
-echo gRunFraco(17). ' ';
+echo 'RunFraco: '.gRunFraco(17). '<br> ';
 
 //GELO
 function gGelo($qtdGelo) {
@@ -151,7 +150,40 @@ function gGelo($qtdGelo) {
 		return 0;
 	}
 }
+echo 'Gelo: '.gGelo(20). '<br>';
 
-=======
->>>>>>> 4992ad3fefade573ca5547866683667f28b9308d
+$qtdRefri = 61;
+$qtdRun = 17;
+$qtdGelo = 20;
+		
+$pepsiSuave = max(min(gPepsiForte($qtdRefri), gRunFraco($qtdRun), gGelo($qtdGelo)),
+min(gPepsiSuave($qtdRefri), gRunSuave($qtdRun), gGelo($qtdGelo)),
+min(gPepsiFraca($qtdRefri), gRunForte($qtdRun), gGelo($qtdGelo)));
+
+$pepsiForte = max(min(gPepsiForte($qtdRefri), gRunSuave($qtdRun), gGelo($qtdGelo)),
+min(gPepsiForte($qtdRefri), gRunForte($qtdRun), gGelo($qtdGelo)),
+min(gPepsiSuave($qtdRefri), gRunForte($qtdRun), gGelo($qtdGelo)));
+
+$pepsiFraca = max(min(gPepsiFraca($qtdRefri), gRunFraco($qtdRun), gGelo($qtdGelo)),
+min(gPepsiFraca($qtdRefri), gRunFraco($qtdRun), gGelo($qtdGelo)),
+min(gPepsiSuave($qtdRefri), gRunFraco($qtdRun), gGelo($qtdGelo)));
+
+echo 'Pepsi Suave: '.$pepsiSuave.' <br> Pepsi Forte: '.$pepsiForte.' <br>Pepsi Fraca: '.$pepsiFraca. '<br>';
+
+if ($pepsiFraca > $pepsiForte and $pepsiFraca > $pepsiSuave) {
+	echo 'Seu Drink está fraco!';
+}
+else if ($pepsiSuave > $pepsiFraca and $pepsiSuave > $pepsiForte) {
+	echo 'Seu Drink está suave';
+}
+else if ($pepsiForte > $pepsiSuave and $pepsiForte > $pepsiFraca){
+	echo 'Seu Drink está forte';
+}
+elseif ($pepsiForte != 0 and $pepsiForte == $pepsiSuave){
+	echo 'Seu Drink está suave';
+}
+elseif ($pepsiFraca != 0 and $pepsiFraca == $pepsiSuave){
+	echo 'Seu Drink está suave';
+}
+
 ?>
