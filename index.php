@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta charset="ISO-8859-1">
 <title>Home</title>
 <link rel="stylesheet" href="css/bootstrap.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,14 +17,13 @@
 
 		</div>
 		<div class="panel panel-success">
-			<div class="panel-heading">Primeiro Escolha o Refrigerante: </div>
+			<div class="panel-heading">Primeiro Escolha o Refrigerante:</div>
 			<div class="panel-body">
-			  <button type="button" class="btn btn-defaut" data-toggle="button">Coca Cola</button>
-			  <button type="button" class="btn btn-defaut" data-toggle="button">Pepsi</button>
+				<a href="CocaCola.php" class="btn btn-success">Coca Cola</a> 
+				<a href="Pepsi.php" class="btn btn-success">Pepsi</a>
 			</div>
 		</div>
-	</div>
-	<nav class="navbar navbar-inverse" role="navigation"></nav>
+		<nav class="navbar navbar-inverse" role="navigation"></nav>
 	</div>
 </body>
 </html>
