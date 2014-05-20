@@ -1,14 +1,6 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Home</title>
-<link rel="stylesheet" href="css/bootstrap.css">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-<?php 
 
+<?php 
+include_once 'cabecalho.php';
 include_once 'funcoes.php';
 
 $qtdCoca = $_POST["qtdCoca"];
@@ -29,7 +21,6 @@ if($resultado=='fraco'){?>
  <div class="alert alert-info"> Seu Drink está forte!</div>
 <?php } ?>
 
-
-
+<a href="index.php" class="btn btn-success">Voltar</a>
 </body>
 </html>

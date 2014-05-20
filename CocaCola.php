@@ -1,16 +1,5 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Home</title>
-<link rel="stylesheet" href="css/bootstrap.css">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-	<div class="container">
-		<nav class="navbar navbar-inverse" role="navigation">
-			<p class="navbar-text">Seja Bem Vindo</p>
-		</nav>
+<?php  include_once 'cabecalho.php'; ?>
+
 		<div class="jumbotron">
 			<h1>Você escolheu Coca Cola</h1>
 			<p>Agora informe as quantidades desejadas :)</p>
@@ -41,7 +30,7 @@
 							de Gelo: (20ml)</label>
 						<div class="col-sm-2">
 							<input type="number" class="form-control" id="qtdGelo" name="qtdGelo"
-								placeholder="20 ml" required value="20">
+								placeholder="20 ml" max="20" min="20" required >
 						</div>
 					</div>
 					<button type="submit" class="btn btn-success">
